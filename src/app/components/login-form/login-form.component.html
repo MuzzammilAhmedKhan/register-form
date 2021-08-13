@@ -1,0 +1,37 @@
+	<br>
+    <br>
+<h2 align="center">Login / <a routerLink="/register">Sign-up</a></h2>
+  <hr>
+      <form #loginForm="ngForm" (submit)="onSubmit(userName.value,password.value)">
+          <table align="center">
+              <tr>
+                  <td colspan="2"><h4>{{errorMessage}}</h4></td>
+              </tr>
+             <tr>
+              <td>
+              <label for="userName">Username</label></td>
+              <td>
+              <input type="text" #userName name="userName" /></td>
+              
+          </tr>
+         <tr>
+                 <td>
+              <label for="password">Password</label></td>
+              <td>
+              <input type="password" #password name="password" /> </td>
+             
+          </tr>
+ 
+          <tr>
+              <td> </td>
+              <td>
+              <button type="submit" class="btn btn-info">
+                  
+                  Login
+              </button>&nbsp;
+              
+              <button class="btn btn-info" routerLink="/register">Go back</button>
+              </td>
+          </tr>
+      </table>
+      </form>

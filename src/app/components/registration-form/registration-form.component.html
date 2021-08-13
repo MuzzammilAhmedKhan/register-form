@@ -1,0 +1,60 @@
+	<br>
+    <br>
+<h2 align="center">Sign-up / <a routerLink="/login">Login</a></h2>
+  <hr>
+      <form #regForm="ngForm" (submit)="onSubmit()">
+          <table align="center">
+              <tr>
+              <td><label for="firstName">First Name</label></td>
+              
+              <td>
+              <input type="text"  name="firstName" [(ngModel)]="user.firstName" /></td>
+             </tr>
+             <tr>
+          <td>
+              <label for="lastName">Last Name</label></td>
+              <td>
+              <input type="text"  name="lastName" [(ngModel)]="user.lastName"  /></td>
+             </tr>
+
+          <tr>
+              <td>
+              <label for="username">Username</label></td>
+              <td>
+              <input type="text" name="username" [(ngModel)]="user.userName"  /></td>
+              
+          </tr>
+         <tr>
+                 <td>
+              <label for="password">Password</label></td>
+              <td>
+              <input type="password" name="password" [(ngModel)]="user.password"  /> </td>
+             
+          </tr>
+          <tr>
+              <td>
+              <label for="address1">Street:</label></td>
+              <td>
+              <input type="text" name="address1" [(ngModel)]="user.address1"  /></td>
+              
+          </tr>
+          <tr>
+              <td>
+              <label for="address2">City/State:</label></td>
+              <td>
+              <input type="text" name="address2" [(ngModel)]="user.address2" /></td>
+              
+         </tr>
+          <tr>
+              <td> </td>
+              <td>
+              <button type="submit" class="btn btn-primary">
+                  
+                  Sign-up
+              </button>&nbsp;
+              
+              <button >Cancel</button>
+              </td>
+          </tr>
+      </table>
+      </form>
